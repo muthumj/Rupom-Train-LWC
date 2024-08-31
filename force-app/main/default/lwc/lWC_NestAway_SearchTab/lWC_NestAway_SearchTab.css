@@ -1,0 +1,17 @@
+.mybox
+{
+    border-style: double;
+    border-color: blue;
+    background-color: green;
+    color: aqua;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    
+}

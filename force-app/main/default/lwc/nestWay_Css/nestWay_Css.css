@@ -1,0 +1,26 @@
+.mycard
+{
+    background-color: orange;
+    border-color: green;
+    border-style: double;
+    border-width: 8px;
+    color: red;
+
+    
+
+}
+
+.mybox
+    {
+
+    background-color: orange;
+    border-color: green;
+    border-style: double;
+    border-width: 24px;
+    color: red;
+    height: 600px;
+    width: 600px;
+    margin-top: 80px;
+    margin-left: 400px;
+
+    }

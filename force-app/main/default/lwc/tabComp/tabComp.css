@@ -1,0 +1,16 @@
+.custom-tab .slds-tabs_default__link {
+    background-color: #4caf50; /* Green background */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Padding for tabs */
+    border-radius: 5px;         /* Rounded corners */
+    margin: 0 5px;              /* Space between tabs */
+}
+
+.custom-tab .slds-tabs_default__link:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+.custom-tab .slds-tabs_default__link.slds-is-active {
+    background-color: #333;     /* Active tab background */
+    color: #fff;                /* Active tab text color */
+}

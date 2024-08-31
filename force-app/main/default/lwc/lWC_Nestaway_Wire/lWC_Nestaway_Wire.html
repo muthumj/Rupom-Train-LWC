@@ -1,0 +1,63 @@
+<template>
+    <lightning-card title="Wire service">
+
+       <div class="madhu">
+        <b>{rapid.data}</b>
+       </div>
+            <lightning-layout multiple-rows="true">
+                <template for:each={muthubud.data} for:item="bud">
+                    <p key={bud.Id}>
+
+                        <lightning-layout-item size="4">
+
+                            Name : {bud.Name}
+
+                        </lightning-layout-item>
+
+
+                    </p>
+
+                </template>
+
+            </lightning-layout>
+
+
+      
+
+    </lightning-card>
+    
+
+
+    <lightning-card title="Wire service">
+
+       
+        <lightning-layout multiple-rows="true">
+            <template for:each={muthubud.data} for:item="bud">
+                
+                <div class="mybx"  key={bud.Id} >
+
+                
+                <p key={bud.Id}> /here key its not required
+
+                   
+
+                        
+                            <b>  Name : </b> {bud.Name} </br>
+                            <b>  Amount : </b> {bud.Amount__c} </br>
+                            <b>  Area : </b> {bud.Area__c} </br>
+                        
+                 
+
+                </p>
+            </div>
+
+            </template>
+
+        </lightning-layout>
+
+
+  
+
+</lightning-card>
+
+</template>

@@ -1,0 +1,26 @@
+<template>
+
+                 <b>NEW BUDGET REQUEST FORM</b>
+    
+    <lightning-card >
+
+        <lightning-record-form record-id="a085j00000HqYR9AAN" object-api-name="Budget__c" mode="view" fields={myfields}> 
+
+
+
+        </lightning-record-form>
+
+    </lightning-card>
+
+    <lightning-card > 
+
+        <lightning-input label= "Budget Name" onchange={capname} > </lightning-input>
+        <lightning-input label= "Ammount" onchange={capamt} > </lightning-input>
+        <lightning-input label= "Area" onchange={capare} > </lightning-input>
+        <lightning-input label= "Sub Area" onchange={capsub} > </lightning-input>
+        
+        <lightning-button label = "Save" icon-name= "utility:save" variant="brand" onclick={saveme}> </lightning-button>
+
+    </lightning-card>
+
+</template>

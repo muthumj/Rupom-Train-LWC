@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent to child">
+        Hello {name}!
+        <lightning-input label="First name" value={name}></lightning-input>
+    </lightning-card>
+
+    <lightning-card title="Child to Parent">
+        <lightning-input label="First name" onchange={handlechange}></lightning-input>
+        <lightning-button label="Click" onclick={handleclick}></lightning-button>
+    </lightning-card>
+</template>

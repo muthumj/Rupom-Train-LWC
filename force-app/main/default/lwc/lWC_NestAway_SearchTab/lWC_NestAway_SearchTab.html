@@ -1,0 +1,50 @@
+<template>
+
+    <lightning-card title="Wire service">
+        <lightning-input label="Search Budget By Name" type="search" onchange={capst}></lightning-input>
+        <lightning-button label="Search" icon-name="Utility:search" onclick={searchme}></lightning-button>
+
+       
+        <lightning-layout multiple-rows="true">
+            <template for:each={mutubud.data} for:item="bud">
+                
+                <div class="mybox"  key={bud.Id} >
+
+                
+                <p > 
+
+                   
+
+                        
+                            <b>  Name : </b> {bud.Name} </br>
+                            <b>  Amount : </b> {bud.Amount__c} </br>
+                            <b>  Area : </b> {bud.Area__c} </br>
+                        
+                 
+
+                </p>
+            </div>
+
+            </template>
+
+        </lightning-layout>
+
+<p><b>******Tabulatar Data Representation******</b></p>
+  
+
+    </lightning-card >
+
+
+
+
+<lightning-card title="Dispaly Data in Tabular Format">
+    <lightning-datatable key-field="Id" data={mutubud.data} columns={col}>
+    
+        
+    </lightning-datatable>
+
+
+</lightning-card>
+
+    
+</template>

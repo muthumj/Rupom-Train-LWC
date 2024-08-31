@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-tabset>
+        <lightning-tab label="Accounts" style="background-color: #4caf50; color: Black; padding: 10px; border-radius: 0; margin: 0 5px;" >
+            <div class="slds-m-around_medium">
+                <!-- Display Account data -->
+                <lightning-datatable
+                    key-field="Id"
+                    data={accountData}
+                    columns={accountColumns}>
+                </lightning-datatable>
+            </div>
+        </lightning-tab>
+        <lightning-tab label="Contacts" style="background-color: #4caf50; color: Black; padding: 10px; border-radius: 0; margin: 0 5px;">
+            <div class="slds-m-around_medium">
+                <!-- Display Contact data -->
+                <lightning-datatable
+                    key-field="Id"
+                    data={contactData}
+                    columns={contactColumns}>
+                </lightning-datatable>
+            </div>
+        </lightning-tab>
+    </lightning-tabset>
+       
+    
+</template>
