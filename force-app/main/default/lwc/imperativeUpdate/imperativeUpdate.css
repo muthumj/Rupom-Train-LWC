@@ -1,0 +1,15 @@
+.slds-m-around_medium {
+    margin: 1rem;
+}
+
+.slds-m-top_medium {
+    margin-top: 1rem;
+}
+
+.slds-text-color_success {
+    color: green;
+}
+
+.slds-text-color_error {
+    color: red;
+}

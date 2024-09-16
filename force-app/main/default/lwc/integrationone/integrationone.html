@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Fetch Product Name by SKU" icon-name="standard:product">
+        <div class="slds-m-around_medium">
+            <!-- Input form -->
+            <lightning-input
+                label="Enter SKU"
+                value={sku}
+                onchange={handleSkuChange}
+                required
+            ></lightning-input>
+            
+            <!-- Submit button -->
+            <lightning-button
+                label="Get Product"
+                variant="brand"
+                onclick={handleFormSubmit}
+                class="slds-m-top_small"
+            ></lightning-button>
+
+            <!-- Display product name or error message -->
+            <template if:true={productName}>
+                <p class="slds-m-top_medium">Product Name: {productName}</p>
+            </template>
+            <template if:true={error}>
+                <p class="slds-text-color_error slds-m-top_medium">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

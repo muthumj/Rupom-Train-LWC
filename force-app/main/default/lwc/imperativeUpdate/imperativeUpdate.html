@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Imperative Update Example" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                label="Account ID" 
+                value={accountId} 
+                onchange={handleInputChange} 
+                data-id="accountId">
+            </lightning-input>
+
+            <lightning-input 
+                label="Account Name" 
+                value={accountName} 
+                onchange={handleInputChange} 
+                data-id="accountName">
+            </lightning-input>
+
+            <lightning-input 
+                label="Phone" 
+                value={phone} 
+                onchange={handleInputChange} 
+                data-id="phone">
+            </lightning-input>
+
+            <lightning-button 
+                label="Update Account" 
+                onclick={handleUpdateAccount} 
+                class="slds-m-top_medium">
+            </lightning-button>
+
+            <template if:true={successMessage}>
+                <p class="slds-text-color_success slds-m-top_medium">
+                    {successMessage}
+                </p>
+            </template>
+
+            <template if:true={errorMessage}>
+                <p class="slds-text-color_error slds-m-top_medium">
+                    {errorMessage}
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

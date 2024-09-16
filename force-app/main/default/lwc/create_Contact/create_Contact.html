@@ -1,0 +1,42 @@
+<template>
+    
+    <div class="slds-grid slds-wrap full-page-container">
+        <!-- Centered Contact Form -->
+        <div class="slds-col slds-size_1-of-1 centered-form-container">
+            <lightning-card title="Create Contact" icon-name="standard:contact">
+
+                
+                <div class="slds-m-around_medium custom-form-container">
+                    <lightning-input
+                        label="First Name"
+                        name="FirstName"
+                        value={contact.FirstName}
+                        onchange={handleChange}
+                    ></lightning-input>
+                    <lightning-input
+                        label="Last Name"
+                        name="LastName"
+                        value={contact.LastName}
+                        onchange={handleChange}
+                    ></lightning-input>
+                    <lightning-input
+                        label="Email"
+                        name="Email"
+                        value={contact.Email}
+                        onchange={handleChange}
+                    ></lightning-input>
+                    <lightning-button
+                        label="Save"
+                        onclick={handleSave}
+                        class="slds-m-top_medium"
+                    ></lightning-button>
+                    <lightning-button
+                        label="Clear"
+                        onclick={handleClear}
+                        class="slds-m-top_medium slds-button_neutral"
+                    ></lightning-button>
+                </div>
+            </lightning-card>
+        </div>
+    </div>
+</template>

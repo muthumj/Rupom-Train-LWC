@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Fetch Post Title">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Enter Post ID" value={postId} onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Fetch Title" onclick={handleFetchTitle} class="slds-m-top_small"></lightning-button>
+
+            <template if:true={postTitle}>
+                <p class="slds-m-top_medium">Post Title: {postTitle}</p>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error slds-m-top_medium">Error: {error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
