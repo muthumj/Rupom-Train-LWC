@@ -1,6 +1,7 @@
 import { LightningElement  } from 'lwc';
 
-export default class MasterComponent extends LightningElement {
+export default class MasterComponent extends LightningElement 
+{
 
    
 

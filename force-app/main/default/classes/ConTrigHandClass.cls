@@ -247,6 +247,42 @@ public class ConTrigHandClass {
         
         update upc;
     }
+
+    public static void prevcon(list<contact> cont )
+    {
+        set<id> ids = new set<id>();
+        for(contact cl : cont)
+        {
+            if(cl.accountid != null)
+            {
+                ids.add(cl.accountid);
+            }
+        }
+
+        list<aggregateresult> tr = [select count(id) cs , accountid from contact where 
+        accountid in :ids group by accountid];
+
+        map<id,integer> mk = new map<id,integer>();
+
+        for(aggregateresult re : tr )
+        {
+            mk.put((id)re.get('accountid'),(integer)re.get('cs'));
+
+        }
+
+        for(contact cl : cont)
+        {
+            if(mk.containskey(cl.accountid) && mk.get(cl.accountid) > 10)
+            {
+                cl.adderror('You cannot add more than 10 contacts');
+            }
+        }
+
+
+
+
+    }
+
   
     
 }
